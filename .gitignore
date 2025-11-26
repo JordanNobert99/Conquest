@@ -1,0 +1,61 @@
+# Conquest - minimal, focused .gitignore
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+out/
+public/build/
+
+# Environment
+.env
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# TypeScript / bundler cache
+*.tsbuildinfo
+.cache/
+.cache-loader
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+
+# .NET build artefacts (if you add a solution later)
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.app
+
+# Docker
+docker-compose.override.yml
+
+# Misc
+.sass-cache/
+*.tmp
+*.swp
