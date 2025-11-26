@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Conquest — Landing</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <style>
+        body {
+            font-family: system-ui,Segoe UI,Roboto,Arial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0
+        }
+
+        .box {
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+            width: 420px;
+            text-align: center
+        }
+
+        button {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #0078d4;
+            background: #0078d4;
+            color: #fff;
+            cursor: pointer
+        }
+    </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Welcome</h1>
+    <p id="userInfo">Checking...</p>
+    <p>
+      <button id="logoutBtn">Sign out</button>
+    </p>
+    <p><a href="/login.html">Manage account</a></p>
+  </div>
+
+  <script type="module" src="./js/landing.js"></script>
+</body>
+</html>

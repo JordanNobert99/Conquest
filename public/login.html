@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Conquest — Login / Register</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <style>
+        body {
+            font-family: system-ui,Segoe UI,Roboto,Arial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px
+        }
+
+        .card {
+            width: 360px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px
+        }
+
+        button.tab {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background: #f7f7f7;
+            cursor: pointer
+        }
+
+            button.tab.active {
+                background: #0078d4;
+                color: #fff;
+                border-color: #0078d4
+            }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px
+        }
+
+        .hint {
+            font-size: .9rem;
+            color: #666
+        }
+
+        .error {
+            color: #900
+        }
+    </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <h2 id="title">Sign in</h2>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-mode="login">Login</button>
+      <button class="tab" data-mode="register">Register</button>
+    </div>
+
+    <form id="authForm">
+      <input id="displayName" name="displayName" placeholder="Display name (register only)" />
+      <input id="email" name="email" type="email" placeholder="Email" required />
+      <input id="password" name="password" type="password" placeholder="Password" required />
+      <button id="submitBtn" type="submit">Continue</button>
+      <div class="hint" id="hint">Using email/password</div>
+      <div class="error" id="error" role="alert" style="display:none"></div>
+    </form>
+
+    <p style="margin-top:12px"><a href="/">Back to entry</a></p>
+  </div>
+
+  <script type="module" src="./js/login.js"></script>
+</body>
+</html>

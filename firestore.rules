@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      allow read: if request.auth != null && (request.auth.uid == userId || request.auth.token.admin == true);
+
+      // Allow create for authenticated users creating their own doc
+      allow create: if request.auth != null && request.auth.uid == userId;
+
+      // Allow update for owner or admin, but prevent non-admins from changing isAdmin
+      allow update: if request.auth != null && (request.auth.uid == userId || request.auth.token.admin == true)
+        && !(('isAdmin' in request.resource.data) && request.auth.token.admin != true);
+    }
+  }
+}

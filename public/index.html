@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Conquest</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+    <div id="status">
+        <h1>Conquest</h1>
+        <p>Checking authentication…</p>
+        <p id="hint" style="font-size:.9rem; color:#666">If this hangs, ensure <code>public/js/firebase-config.js</code> exists and exports your Firebase config as <code>window.firebaseConfig</code>.</p>
+        <p><a href="login.html">Go to login (manual)</a></p>
+    </div>
+    <noscript>
+        <div style="position:fixed;left:0;right:0;bottom:0;padding:8px;background:#ffefef;color:#900;text-align:center;">
+            JavaScript is required. Please enable JavaScript to continue.
+        </div>
+    </noscript>
+</body>
+</html>
